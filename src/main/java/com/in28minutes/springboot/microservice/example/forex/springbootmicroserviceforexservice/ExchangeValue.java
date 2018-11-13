@@ -16,7 +16,7 @@ public class ExchangeValue implements Serializable {
     private Long id;
 
     // Is this similar to field?
-    @Column(name="currency_form")
+    @Column(name="currency_from")
     private String from;
 
     @Column(name="currency_to")

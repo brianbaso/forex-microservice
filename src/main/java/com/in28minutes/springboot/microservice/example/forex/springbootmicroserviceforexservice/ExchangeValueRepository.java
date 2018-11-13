@@ -3,8 +3,6 @@ package com.in28minutes.springboot.microservice.example.forex.springbootmicroser
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
 // JpaRepository <-- Object marshalling --> Database
 @Repository
 public interface ExchangeValueRepository extends JpaRepository<ExchangeValue, Long> {
