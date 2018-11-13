@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+// Create a controller to expose REST service
 @RestController
 public class ForexController {
 
@@ -23,12 +24,11 @@ public class ForexController {
         // Where we get the exchange value from the database
         ExchangeValue exchangeValue = repository.findByFromAndTo(from, to);
 
-        // Get the port from the environment
+        // Get the port from the environment and set to the response bean
+        // Could be done with a DTO instead
         exchangeValue.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
 
         return exchangeValue;
     }
-
-
 
 }
