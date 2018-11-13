@@ -3,10 +3,13 @@ package com.in28minutes.springboot.microservice.example.forex.springbootmicroser
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-public class ExchangeValue {
+public class ExchangeValue implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     // Id specifies the primary key of an entity
     @Id
